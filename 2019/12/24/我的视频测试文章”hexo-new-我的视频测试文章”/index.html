@@ -356,6 +356,16 @@ hexo new 我的视频测试文章”</h1>
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/12/24/%E6%88%91%E7%9A%84%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%E2%80%9Dhexo-new-%E6%88%91%E7%9A%84%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%E2%80%9D/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/24/%E6%88%91%E7%9A%84%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%E2%80%9Dhexo-new-%E6%88%91%E7%9A%84%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%E2%80%9D/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -456,9 +466,7 @@ hexo new 我的视频测试文章”</h1>
 
   
     <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80ODAyOS8yNDUyNg=="></div>
     </div>
-
   
 
 
@@ -772,26 +780,37 @@ hexo new 我的视频测试文章”</h1>
 
 
   
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
-
-
-
-
-
-
-
-
-
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'i3MaUz1c4Nlyl3ksm0mgmQhJ-gzGzoHsz',
+        appKey: 'MFOK62mTAEEN5L4VcjVD1e4r',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
@@ -1133,5 +1152,5 @@ hexo new 我的视频测试文章”</h1>
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
 </html>
