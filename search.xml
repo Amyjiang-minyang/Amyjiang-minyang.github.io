@@ -3,7 +3,21 @@
   <entry>
     <title>numpy study begin</title>
     <url>/2020/03/19/numpy-study-begin/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>After finishing the initial learning of code about python in winter holiday, I start to learn numpy in order to help future data analysis while doing project. Numpy is a computer tool which can create arrays, get single elements from arrays, stitch and split arrays and much more. Compared with simple codes I learned before, it is much complicated to write with Numpy. </p>
+<p>However, <em>practice makes perfect</em>. Suggested by our teacher who can be an expert in coding, he clarifies that skills of coding can be practiced through muscle memory. </p>
+<p>Here comes our firsst lesson: </p>
+<p><img src="https://s1.ax1x.com/2020/03/19/8D7aMn.png" alt="8D7aMn.png"></p>
+<p>what comes after is much more comlicated data analysis. </p>
+<p>What impressed me again at class is a statement from our teacher. He clarified the necessity of computer analysis again as he made a comparison between this and excel. He mentioned that Excel may go crush when there are thousands of sets of data, but computer can be used for the period of <strong><em>Big Data</em></strong>. The use for evidences and data in any fields’ research is inevitable. </p>
+<p><img src="https://s1.ax1x.com/2020/03/19/8D77Je.png" alt="8D77Je.png"></p>
+<p>This is an visible gram of  a 2-D continuous function:</p>
+<p><img src="https://s1.ax1x.com/2020/03/19/8DH9Jg.png" alt="8DH9Jg.png"></p>
+<p>We can also make a division of data extent: </p>
+<p><img src="https://s1.ax1x.com/2020/03/19/8DHkyn.png" alt="8DHkyn.png"></p>
+<p>How to make the neighbor node clear and visible: </p>
+<p><img src="https://s1.ax1x.com/2020/03/19/8DHALq.png" alt="8DHALq.png"></p>
+<p>Frankly, everthing about code and numpy is complicated for me. I am trying my best to memorize these codes and try to utilize in the future cases that i may meet. </p>
+]]></content>
       <tags>
         <tag>data analysis</tag>
       </tags>
