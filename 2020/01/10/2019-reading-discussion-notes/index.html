@@ -1,37 +1,1384 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="reading," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="9.15. Economy:  Are profits the only business of business?   basic economic problem  a)    资源稀缺 b)   很好distribution  c)    What good will be produced? d)   How to produce?  e)    Whom these products w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019 reading discussion notes">
+<meta property="og:url" content="http://yoursite.com/2020/01/10/2019-reading-discussion-notes/index.html">
+<meta property="og:site_name" content="Amy Jiang&#39;s Blog">
+<meta property="og:description" content="9.15. Economy:  Are profits the only business of business?   basic economic problem  a)    资源稀缺 b)   很好distribution  c)    What good will be produced? d)   How to produce?  e)    Whom these products w">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-01-10T06:15:56.000Z">
+<meta property="article:modified_time" content="2020-01-10T06:21:00.200Z">
+<meta property="article:author" content="Amyjiang-minyang">
+<meta property="article:tag" content="reading">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/01/10/2019-reading-discussion-notes/"/>
+
+
+
+
+
+  <title>2019 reading discussion notes | Amy Jiang's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Amy Jiang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">first step to blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archives"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/10/2019-reading-discussion-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.PNG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amy Jiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2019 reading discussion notes</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-10T14:15:56+08:00">
+                2020-01-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/01/10/2019-reading-discussion-notes/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/01/10/2019-reading-discussion-notes/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">阅读数量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>9.15.</strong></p>
+<p><strong>Economy:</strong> </p>
+<p><strong>Are profits the only business of business?</strong> </p>
+<ol>
+<li>basic economic problem</li>
+</ol>
+<p>a)    资源稀缺</p>
+<p>b)   很好distribution </p>
+<p>c)    What good will be produced?</p>
+<p>d)   How to produce? </p>
+<p>e)    Whom these products will be produced for?</p>
+<p>i.    传统方法：传承前辈</p>
+<p>ii.    Profit: good –&gt; profit increase –&gt; out put扩大生产 –&gt; scarcity –&gt; bid –&gt; price （前三者的价值）increase –&gt; purchasing power increase </p>
+<p>Productive? –&gt; 减少对几项因素的依赖性 –&gt; 开源节流 </p>
+<p>Whether or not business </p>
+<p>Firms have little obligation beyond making profit </p>
+<p>YES: preaching pure and unadulterated socialism </p>
+<p>NO: if capitalism is to survive </p>
+<p><strong>三种经济体制：</strong></p>
+<ol>
+<li><p>planned economy 计划经济</p>
+</li>
+<li><p>Mixed economy混合</p>
+</li>
+<li><p>Market economy市场</p>
+</li>
+</ol>
+<p><strong>4 factors of production</strong> </p>
+<p>Land </p>
+<p>Labor –&gt; 人才稀缺</p>
+<p>Capital </p>
+<p>Enterprise –&gt; 不太会稀缺？</p>
+<p><strong>商科</strong>：</p>
+<p><strong>心理账户 –&gt;</strong> <strong>由付出变为收入 –&gt;</strong> <strong>情感维系</strong> </p>
+<ol>
+<li><p>价值 –&gt; 因人而异 </p>
+</li>
+<li><p>想卖出的产品放在合适的心理账户中</p>
+</li>
+<li><p>500$巧克力：</p>
+</li>
+</ol>
+<p>a)    生活日销</p>
+<p>b)   情感维系 </p>
+<ol start="4">
+<li>装修：现有面积 多几个平米</li>
+</ol>
+<p>a)    变大房子而不是装修费</p>
+<p><strong>沉没成本：</strong></p>
+<ol>
+<li><p>自助餐：来吃， 但是吃的不那么多 –&gt; “已投入对冲”：对消费者来说花“更少”的钱来更快回本</p>
+</li>
+<li><p>对冲形式：优惠券–&gt;低成本 </p>
+</li>
+<li><p>健身卡：送不值钱的东西</p>
+</li>
+<li><p>保健品：赠品高标价 来让你觉得花费的少，得到的多</p>
+</li>
+</ol>
+<p>9.22.</p>
+<ol>
+<li><p>The social responsibility[<a href="#_msocom_1">JMA1]</a> of business s to increase its profits </p>
+</li>
+<li><p>Business man à defend free enterprise 通过social responsibility à government by market forces (synonym for capitalism) </p>
+</li>
+<li><p>Business do not have responsibility à humans have responsibility à individual</p>
+</li>
+</ol>
+<p>Corporate executive à social intense à spending others money (shareholder, employee lower the wage, consumers rise the price) </p>
+<p>Supply, labor, land </p>
+<p>Government’s aim </p>
+<p>Impose taxes à undermining the basis of free society </p>
+<p>Decide how the tax proceed shall be spent</p>
+<p>Principle: Tax problem: social responsibility and money?</p>
+<p>Consequence: trade union </p>
+<p>10.5. </p>
+<p>accounting 的角色</p>
+<ol>
+<li><p>记录已经发生的事情 — 财务会计</p>
+</li>
+<li><p>管理决策 à 根据数据 进行预判性选择 人对于数据有滞后性</p>
+</li>
+<li><p>财务战略 — 判断风险</p>
+</li>
+</ol>
+<p>a)    杠杆借款</p>
+<p>b)   超额风险</p>
+<p>股东（所有者）？？承担风险</p>
+<p>经营者承担损失</p>
+<p>经济萧条</p>
+<ol>
+<li><p>Half profit à 支付股利</p>
+</li>
+<li><p>Half à 投资</p>
+</li>
+</ol>
+<p>大萧条时期</p>
+<ol>
+<li>Keep money à 股利 下降 &amp; 投资 下降 à 活期账户现金上升</li>
+</ol>
+<p>充分现金流 </p>
+<p>大众市场 </p>
+<ol start="2">
+<li><p>潜在市场 </p>
+</li>
+<li><p>完全竞争 不完全竞争</p>
+</li>
+<li><p>规模优势 先发优势 </p>
+</li>
+<li><p>管理会计 记录：现金 成本</p>
+</li>
+<li><p>财务会计 照帐办事</p>
+</li>
+<li><p>创造性会计 商品趋势和市场进行投资</p>
+</li>
+<li><p>商业会计 精确估计成本 </p>
+</li>
+<li><p>公允价值 </p>
+</li>
+<li><p>历史成本 ： 购买资产时 支付的成本</p>
+</li>
+</ol>
+<p>Market: </p>
+<p>\5. Location </p>
+<p>a)    Regional </p>
+<p>b)   Local </p>
+<p>c)    International </p>
+<p>\6. Size </p>
+<p>\7. Growth à percentage change in the total size of the market (value or volume)</p>
+<p>\8. Share </p>
+<p>a)    Market share: firms sales in time period &#x2F; total market sales in time period ✖️100%</p>
+<p>b)   Adding value: the difference the selling price of a product and the cost of the materials and components bought into make it. </p>
+<p>Not the same as profit (total) </p>
+<p>Economy 拉丁文词语来源 à 管理家庭的人 à 家庭的决策 à 社会的决策 (scarcity) à 资源管理 </p>
+<p>Q1： 如何决策：</p>
+<ol>
+<li><p>交替关系  权衡取舍 </p>
+</li>
+<li><p>成本 某东西的成本是为了得到它所放弃的东西 à 机会成本</p>
+</li>
+</ol>
+<p>a)    所以对选择方案中的成本和利益进行比较 </p>
+<ol start="3">
+<li>理性人考虑边际量:</li>
+</ol>
+<p>a)    最大努力à 实现目标 </p>
+<p>b)   边际行动 边缘调整 </p>
+<ol start="4">
+<li>激励： 人为 或者 自然</li>
+</ol>
+<p>a)    惩罚</p>
+<p>b)   奖励</p>
+<p>Q2： 如何交易</p>
+<ol start="5">
+<li>贸易好 à win-win</li>
+</ol>
+<p>a)    低成本 </p>
+<ol start="6">
+<li><p>市场是组织经济活动的好方法</p>
+</li>
+<li><p>政府有时可以改变市场结果 （凯恩斯）</p>
+</li>
+</ol>
+<p>a)    政府规则 </p>
+<p>b)   产权制度 </p>
+<p>c)    No government à market failure à externality </p>
+<p>d)   解决solution：解决不对称性</p>
+<p>i.    merit good 教育 疫苗 </p>
+<p>ii.    public good 公路 红绿灯 </p>
+<p>Q3： 整体经济如何运行</p>
+<ol start="8">
+<li>生活水平： 生产率贫富不均</li>
+</ol>
+<p>a)    物品</p>
+<p>b)   劳务</p>
+<ol start="9">
+<li>货币， 物价 物价总水平上升</li>
+</ol>
+<p>a)    长期： inflation 通货膨胀 </p>
+<ol start="10">
+<li>社会面临通货膨胀与失业之间的短期权衡利弊与取舍</li>
+</ol>
+<p>a)    短期：整体支出水平增加 à 需求增加 à 企业price上升à 雇佣更多人 à 更少的失业率</p>
+<p>b)   经济周期 无法预测的波动</p>
+<p>Marketing mix: 市场营销组合 </p>
+<p>4Ps: </p>
+<p>Product: design &amp; quality </p>
+<p>Price: long run, cover costs </p>
+<p>Place: channels 销售渠道 </p>
+<p>Promotion: 促销 how a product is advertise. 1. Social media 2. Discount 3. Money-off 4. free gifts </p>
+<p>4Cs 1. Customers 2. Cost to customers 3. Communication with customers ex. Guide &amp; gain market information 4. Convenience to customers </p>
+<p>Connect with each other </p>
+<ol start="3">
+<li>Types of product</li>
+</ol>
+<p>a)    Consumer goods </p>
+<p>b)   Consumer services </p>
+<p>c)    Producer goods </p>
+<p>d)   Producer services </p>
+<p>实物资产 和 金融资产 （对实体资产的债权）</p>
+<p>净收入   投资者 </p>
+<p>金融资产的一个分类     </p>
+<ol>
+<li>固定收益 fixed income</li>
+</ol>
+<p>a)    短期的 债务证券 CDs 低风险 诋回报</p>
+<p>b)   长期的 国债 高风险 高回报 </p>
+<ol start="2">
+<li><p>权益 equity 关系最不密切</p>
+</li>
+<li><p>衍生品 derivatives： 来源于其他资产的价格 涨期权</p>
+</li>
+<li><p>夸大利润</p>
+</li>
+</ol>
+<p>过度乐观的研究报告</p>
+<p>咨询&gt;审计 01年的案例 </p>
+<p>审计过于宽松 à 道德丑闻 管理者之间没有任何联系可以某种程度解决这个</p>
+<p>à 增加独立CEO</p>
+<p>公司声誉 —— 增加消费者之间的联系</p>
+<p>储蓄，投资 和 安全投资：分类 </p>
+<p>保险银行账户 安全投资 </p>
+<p>策略： 从上而下的投资策略， 基金公司 top down 关注在一个行业 </p>
+<p>​    自下而上的投资策略      bottom up 似乎提供最具有吸引力的行业上</p>
+<p>12.1. </p>
+<p>决策时间: 消费者做出购买决定所需要的时间 （平均20秒） </p>
+<p>Ex：买辣酱的实验 </p>
+<p>卖果酱的时间 购买量提升</p>
+<p>商品多 决策时间长 转化率降低</p>
+<p>减少决策时间的方法： </p>
+<ol start="4">
+<li><p>行动指令 “+”</p>
+</li>
+<li><p>信息聚焦 买苹果手机 </p>
+</li>
+<li><p>短缺刺激 时间短 夸大的成份</p>
+</li>
+<li><p>网络效应：用户越多 越有价值 越有价值 用户越多 </p>
+</li>
+<li><p>风险投资：无论如何 尽快超过临界点， “721”市场局面 </p>
+</li>
+<li><p>合并并购</p>
+</li>
+</ol>
+<p>价格及其波动</p>
+<p>面包价格在一开始会低 </p>
+<p>劣币驱逐良币</p>
+<p>通货膨胀</p>
+<p>路径依赖：做了一件事 总会不自觉重复 </p>
+<p>政策顾问</p>
+<p>实证表述：世界à实证分析 价值判断 </p>
+<p>曼昆经济学原理 </p>
+<p>经济家 哲学家 两面性 </p>
+<p>分歧： 运行不同的论证 理论的 正确性</p>
+<p>价值观不同： 规范观点不同 </p>
+<p>相互依存和贸易的好处 </p>
+<p>使社会上的每个人都获利 à 优势 price </p>
+<p>Promotion </p>
+<p>Price skimming: high price</p>
+<p>Promotion: advertising </p>
+<p>促销 软性广告 </p>
+<p>（经济总产量）比较优势 谁更有效率，贸易基础</p>
+<p>Successful product </p>
+<p>促销的好处： producer 提高销售额和销售量 </p>
+<p>最终物品不算在GDP之内</p>
+<p>Investment</p>
+<p>边际效应 </p>
+<p>每多消费一件商品 这件商品给你带来的满足感</p>
+<hr>
+<p> [<a href="#_msoanchor_1">JMA1]</a>经营者衍生出的想法</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/reading/" rel="tag"># reading</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/10/taking-sides-global-issues/" rel="next" title="taking sides global issues">
+                <i class="fa fa-chevron-left"></i> taking sides global issues
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/01/10/2019-%E5%8D%87%E5%AD%A6-presentation/" rel="prev" title="2019 升学 presentation">
+                2019 升学 presentation <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.PNG"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archives">
+              
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Amyjiang-minyang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src=“https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js”></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'i3MaUz1c4Nlyl3ksm0mgmQhJ-gzGzoHsz',
+        appKey: 'MFOK62mTAEEN5L4VcjVD1e4r',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>
